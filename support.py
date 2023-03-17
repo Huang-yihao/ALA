@@ -1,18 +1,20 @@
-import cv2
-import torch
-from torch.nn import functional as F
+
 import torch.nn as nn
+import numpy as np
+import torch
 
 def light_filter(img, param, steps, img_max, img_min):
     param=param[:,:,None,None]
-    color_curve_sum = torch.sum(param, 4) + 1e-30
+    light_curve_sum = torch.sum(param, 4) + 1e-30
     image = img * 0
+
+    # lightness range constraint
     used_tensor = img_max - img_min
     img = img - img_min
     for i in range(steps):
         delta = torch.clamp(img - used_tensor.item() * i / steps, 0, used_tensor.item() / steps) * param[:, :, :, :, i]
         image += delta
-    image *= steps / color_curve_sum
+    image *= steps / light_curve_sum
     image += img_min
     return image
 
@@ -25,8 +27,6 @@ class Normalize(nn.Module):
         return (x - self.mean.type_as(x)[None,:,None,None]) / self.std.type_as(x)[None,:,None,None]
 
 
-import numpy as np
-import torch
 
 M = np.array([[0.412453, 0.357580, 0.180423],
               [0.212671, 0.715160, 0.072169],
