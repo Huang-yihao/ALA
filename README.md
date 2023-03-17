@@ -1,6 +1,15 @@
 # ALA
 This is the official repository of [ALA: Adversarial Lightness Attack via Naturalness-aware Regularizations](https://arxiv.org/pdf/2201.06070.pdf).
 
+
+# Requirements
+
+```
+python3
+torch == 1.8.0
+torchvision == 0.9.0
+```
+
 # References
 ```
 @article{sun2022ala,
