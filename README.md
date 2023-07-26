@@ -1,5 +1,6 @@
 # ALA
-This is the official repository of [ALA: Adversarial Lightness Attack via Naturalness-aware Regularizations](https://arxiv.org/pdf/2201.06070.pdf).
+This is the official repository of [ALA: Naturalness-aware Adversarial Lightness Attack](https://arxiv.org/pdf/2201.06070.pdf).
+The paper is accepted by ACM MM 2023.
 
 
 # Requirements
