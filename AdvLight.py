@@ -66,9 +66,6 @@ for k in tqdm(range(len(image_id_list))):
     if k >= 0:
         image_ori = cv2.imread(input_path + image_id_list[k])
         image_ori = cv2.cvtColor(image_ori, cv2.COLOR_BGR2RGB)
-        image_ori = trn(image_ori).unsqueeze(0).cuda()
-        image_ori = transforms.ToPILImage()(image_ori.squeeze(0).cpu())
-        image_ori = cv2.imread(input_path+image_id_list[k], 1)
 
         # from RGB color space to Lab color space
         X_ori = (RGB2Lab_t(torch.from_numpy(image_ori).cuda()/1.0) + 128)/255.0
