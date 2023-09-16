@@ -100,13 +100,10 @@ def __lab2xyz__t(Lab_tensor):
 def __xyz2rgb_t(xyz_tensor):
     xyz_tensor = xyz_tensor * 255
     xyz_tensor = xyz_tensor.permute(2, 0, 1)
-    bgr_tensor = torch.matmul(M_neg_t, xyz_tensor)
-    bgr_tensor = bgr_tensor.permute(1, 2, 0)
-    bgr_tensor = torch.clamp(bgr_tensor, 0, 255)
-    b, g, r = torch.split(bgr_tensor, [1, 1, 1])
-    rg = torch.cat((r,g), 0)
-    rgb = torch.cat((rg,b), 0)
-    return rgb
+    rgb_tensor = torch.matmul(M_neg_t, xyz_tensor)
+    rgb_tensor = rgb_tensor.permute(1, 2, 0)
+    rgb_tensor = torch.clamp(rgb_tensor, 0, 255)
+    return rgb_tensor
 
 
 def Lab2RGB_t(lab_tensor):
