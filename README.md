@@ -13,10 +13,9 @@ torchvision == 0.9.0
 
 # References
 ```
-@article{sun2022ala,
-  title={ALA: Adversarial Lightness Attack via Naturalness-aware Regularizations},
-  author={Sun, Liangru and Juefei-Xu, Felix and Huang, Yihao and Guo, Qing and Zhu, Jiayi and Feng, Jincao and Liu, Yang and Pu, Geguang},
-  journal={arXiv preprint arXiv:2201.06070},
-  year={2022}
+@article{huang2023ala,
+  title={ALA: Naturalness-aware Adversarial Lightness Attack},
+  author={Huang, Yihao and Sun, Liangru and Guo, Qing and Felix Juefei-Xu, and Zhu, Jiayi and Feng, Jincao and Liu, Yang and Pu, Geguang},
+  year={2023}
 }
 ```
