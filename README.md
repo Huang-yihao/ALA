@@ -2,7 +2,7 @@
 This is the official repository of [ALA: Naturalness-aware Adversarial Lightness Attack](https://arxiv.org/pdf/2201.06070.pdf).
 The paper is accepted by ACM MM 2023.
 
-[![arXiv](https://img.shields.io/badge/arXiv-2208.01618-b31b1b.svg)]([https://arxiv.org/abs/2201.06070](https://arxiv.org/pdf/2201.06070.pdf))
+[![arXiv](https://img.shields.io/badge/arXiv-2201.06070-b31b1b.svg)]([https://arxiv.org/abs/2201.06070](https://arxiv.org/pdf/2201.06070.pdf))
 
 > **ALA Naturalness-aware Adversarial Lightness Attack**<br>
 > Yihao Huang, Liangru Sun, Qing Guo, Felix Juefei-Xu, Jiayi Zhu, Jincao Feng, Yang Liu, Geguang Pu <br>
